@@ -1,0 +1,33 @@
+{
+  "name": "movie-watcher",
+  "version": "1.0.0",
+  "description": "A movie tracker built with the MEAN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "4.2.x",
+    "npm": "3.3.x"
+  },
+  "keywords": [
+    "movie",
+    "mean"
+  ],
+  "author": "Deon Takpuie",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "crypto": "0.0.3",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "jade": "^1.11.0",
+    "mongoose": "^4.2.3",
+    "mongoose-findorcreate": "^0.1.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "stylus": "^0.52.4"
+  }
+}

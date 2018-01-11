@@ -1,0 +1,202 @@
+//--------------------------------
+// Global variables
+//--------------------------------
+brand-color = #c7254e
+hovered-color = #d74a6d
+
+//--------------------------------
+// Mixins
+//--------------------------------
+transform-rotate(degrees)
+  -webkit-transform rotate(degrees)
+  -ms-transform rotate(degrees)
+  transform rotate(degrees)
+
+border-radius(pix)
+  -webkit-border-radius: pix
+  -moz-border-radius: pix
+  border-radius: pix
+
+ease-in-out(sec)
+  -webkit-transition: width  sec ease-in-out
+  -moz-transition:width  sec ease-in-out
+  -o-transition: width  sec ease-in-out
+  transition: width  sec ease-in-out
+
+reset-border()
+  border none !important
+  -webkit-box-shadow none !important
+  -moz-box-shadow none !important
+  box-shadow none !important
+
+
+//--------------------------------
+// General styles
+//--------------------------------
+body
+  font-weight 200
+
+main
+  padding-top 64px
+
+a, a:hover, a:focus
+  text-decoration none
+
+.btn-default
+  color white
+  background-color brand-color
+  border none
+
+.btn-default:hover
+  color white
+  background-color hovered-color
+  border none
+
+.btn-outline
+  color brand-color
+  background-color transparent
+  border 1px solid brand-color
+
+.btn-outline:hover
+  color hovered-color
+  background-color transparent
+  border 1px solid hovered-color
+
+.success-toast-brand
+  background-color brand-color
+  top: 84px
+
+.error-toast-brand
+  background-color brand-color
+  top 12px
+
+.error-msg
+  color: brand-color
+  font-weight 400
+  font-size 1.2em
+  padding-top 24px
+
+//--------------------------------
+// Header/Navbar styles
+//--------------------------------
+.navbar-default
+  background-color white
+  border 0
+
+.navbar-decor
+  height 12px
+  background-color brand-color
+
+.navbar-header
+  margin-top 12px
+  text-decoration none
+  .glyphicon-film
+    color brand-color
+    font-size 1.8em
+    transform-rotate 45deg
+  h1
+    display inline
+    margin-left 12px
+    color #222
+  .small
+    color #333
+    font-size 1em
+    margin 6px 0 0 -6px
+
+#navbar-auth
+  margin-top 32px
+  .dropdown-menu
+    padding 12px
+    width 300px
+    input
+      margin-bottom 12px
+
+.logout-nav
+  .small
+    display inline-block
+    font-size 1.4em
+    margin-right 12px
+    color #222
+  .dropdown-menu
+    margin-right 40px
+
+
+// Move the main tag as the dropdown expands
+@media (max-width: 768px)
+  .opened
+    main
+      padding-top: 296px
+    .btn-outline
+      margin-top 32px
+    .logout-nav
+      .small
+        display block
+
+
+//--------------------------------
+// Tracker styles
+//--------------------------------
+
+.tracker-header
+  h4
+    display inline
+    margin-right: 12px
+  a:hover
+    text-decoration none
+    color: #555555
+
+.empty-message
+  font-size 1.4em
+  margin-top 24px
+
+.add-tracked
+  display inline-block
+  text-decoration none
+  color #777
+  font-size 1.6em
+  margin-top 24px
+
+.add-tracked:hover
+  text-decoration none
+  color: #555
+
+//--------------------------------
+// Search styles
+//--------------------------------
+
+
+.expandable
+  border-radius(5px)
+  ease-in-out(0.2s)
+  width 80%
+  border 1px solid brand-color
+
+.expandable:hover
+  width: 100%
+  border 1px solid brand-color
+  box-shadow inset 0 0 0, white 0 0 8px brand-color
+
+.search-bar
+  outline: none !important
+  reset-border()
+
+.search-bar:focus
+  border: none
+  outline 0
+
+.search-btn
+  background none !important
+  reset-border()
+
+
+.movies
+  padding 24px 0
+  list-style none
+  li
+    margin 0
+
+.movie-preview
+  img
+    padding-top 12px
+  .small
+    font-size 0.9em

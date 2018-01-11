@@ -1,0 +1,24 @@
+<form ng-submit="signupCtrl.register(fullname, username, email, password, passwordcheck)">
+  <div class="form-group">
+    <label for="fullName">Full name</label>
+    <input type="text" class="form-control" id="fullName" ng-model="fullname">
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" ng-model="username">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" ng-model="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" ng-model="password">
+  </div>
+  <div class="form-group">
+    <label for="password-check">Confirm password</label>
+    <input type="password" class="form-control" id="password-check" ng-model="passwordcheck">
+  </div>
+  <button type="submit" class="btn btn-lg btn-default pull-right">Sign Up</button>
+  <p class="error-msg">{{ signupCtrl.errorMessage }}</p>
+</form>

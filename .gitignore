@@ -1,0 +1,14 @@
+# System files
+._*
+.DS_Store
+Thumbs.db
+
+# IDE’s files or folders
+.idea
+.project
+.sublime-project
+.sublime-workspace
+
+# Node modules
+node_modules
+

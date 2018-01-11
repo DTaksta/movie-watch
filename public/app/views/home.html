@@ -1,0 +1,17 @@
+<div ng-show="homeCtrl.latestAddedMovies.length > 0">
+  <h4>LATEST ADDED</h4>
+  <ul class="movies" ng-repeat="movie in homeCtrl.latestAddedMovies"
+      >
+    <li>
+      <div class="row movie-preview">
+        <img ng-src="{{ movie.posterUrl  }}" alt="{{ movie.title }}" class="col-xs-4">
+        <div class="col-xs-8">
+          <h5>{{ movie.title }}</h5>
+          <p >{{ movie.genres }}</p>
+          <p class="small">{{ movie.description }}</p>
+        </div>
+      </div>
+      <hr/>
+    </li>
+  </ul>
+</div>

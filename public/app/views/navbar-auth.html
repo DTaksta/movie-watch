@@ -1,0 +1,44 @@
+<div id="navbar-auth" class="navbar-collapse collapse" ng-controller="NavbarAuthCtrl as authCtrl">
+  <ul class="nav navbar-nav navbar-right" ng-hide="authCtrl.isLoggedIn()">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+         aria-haspopup="true" aria-expanded="true">
+        Sign In
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <form role="form" ng-submit="authCtrl.authenticate(username, password)">
+            <input type="text" class="form-control" placeholder="Username" ng-model="username">
+            <input type="password" class="form-control" placeholder="Password" ng-model="password">
+            <button type="submit" class="btn btn-sm btn-default pull-right">Submit</button>
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span class="navbar-btn">
+        <a href="#" class="btn btn-lg btn-default btn-outline" ui-sref="signup">
+          Sign Up
+        </a>
+      </span>
+    </li>
+  </ul>
+  <div class="nav navbar-nav navbar-right logout-nav" ng-show="authCtrl.isLoggedIn()">
+    <a href="#" class="dropdown-toggle small" data-toggle="dropdown" role="button"
+       aria-haspopup="true" aria-expanded="true">
+      Hi, {{ authCtrl.loggedUser }}! <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" >
+      <li>
+        <a href="" ui-sref="tracked">Tracked</a>
+        <a href="" ui-sref="watched">Watched</a>
+      </li>
+    </ul>
+    <span class="navbar-btn">
+      <a href="" class="btn btn-lg btn-default btn-outline" ng-click="authCtrl.logout()">
+        Log Out
+      </a>
+    </span>
+  </div>
+</div>

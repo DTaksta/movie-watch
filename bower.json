@@ -1,0 +1,33 @@
+{
+  "name": "movie-watcher",
+  "description": "A movie tracker built with the MEAN stack",
+  "main": "server.js",
+  "authors": [
+    "Deon Takpuie"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "movie",
+    "mean"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap-css": "~3.3.4",
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-toastr": "~1.5.0",
+    "angular-animate": "~1.4.7",
+    "underscore": "~1.8.3"
+  }
+}

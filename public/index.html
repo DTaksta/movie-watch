@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Movie Watcher - Watch your movies later</title>
+  <meta name="description" content="Keep track of the movies you watch. Movie-watcher interacts with a large
+    movie database so you can save and manage your favourites flicks in one web application!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/"/>
+
+  <!-- Favicon generator -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="vendor/bootstrap-css/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="vendor/angular-toastr/dist/angular-toastr.css"/>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body ng-app="app" opened-toggle>
+
+<header class="navbar navbar-default">
+  <div class="navbar-decor">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-auth">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" ui-sref="home" class="navbar-brand">
+          <i class="glyphicon glyphicon-film pull-left"></i>
+          <h1>Movie Watcher</h1>
+          <p class="small">Watch your movies later</p>
+        </a>
+      </div>
+      <div ng-include="'app/views/navbar-auth.html'"></div>
+    </div>
+  </div>
+</header>
+
+<main class="row">
+  <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"
+       ui-view>
+  </div>
+</main>
+
+<footer class="container text-center">
+  <hr/>
+  <p>&copy; Deon Takpuie 2018</p>
+</footer>
+
+<!-- Bower packages -->
+<script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="vendor/bootstrap-css/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/angular/angular.js"></script>
+<script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="vendor/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script type="text/javascript" src="vendor/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="vendor/underscore/underscore.js"></script>
+
+<!-- Angular scripts -->
+<script type="text/javascript" src="app/app.js"></script>
+
+<!-- Angular controllers -->
+<script type="text/javascript" src="app/controllers/navbar-auth.ctrl.js"></script>
+<script type="text/javascript" src="app/controllers/signup.ctrl.js"></script>
+<script type="text/javascript" src="app/controllers/home.ctrl.js"></script>
+<script type="text/javascript" src="app/controllers/tracked.ctrl.js"></script>
+<script type="text/javascript" src="app/controllers/watched.ctrl.js"></script>
+<script type="text/javascript" src="app/controllers/search.ctrl.js"></script>
+
+<!-- Angular directives -->
+<script type="text/javascript" src="app/directives/opened-toggle.js"></script>
+<script type="text/javascript" src="app/directives/enter-click.js"></script>
+
+<!-- Angular services -->
+<script type="text/javascript" src="app/services/underscore.service.js"></script>
+<script type="text/javascript" src="app/services/auth.service.js"></script>
+<script type="text/javascript" src="app/services/toastr.service.js"></script>
+<script type="text/javascript" src="app/services/movie.service.js"></script>
+<script type="text/javascript" src="app/services/genres.service.js"></script>
+<script type="text/javascript" src="app/services/user.service.js"></script>
+
+</body>
+</html>

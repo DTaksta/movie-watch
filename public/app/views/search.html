@@ -1,0 +1,27 @@
+<div class="input-group expandable">
+  <input type="text" class="form-control search-bar" placeholder="Search for a movie..." ng-model="query"
+         enter-click="searchCtrl.getMovies(query);">
+    <span class="input-group-btn">
+        <i class="glyphicon glyphicon-search btn"
+           ng-click="searchCtrl.getMovies(query)">
+        </i>
+    </span>
+</div>
+<p class="error-msg" ng-show="!!searchCtrl.errorMessage">{{ searchCtrl.errorMessage }}</p>
+<ul class="movies" ng-repeat="movie in searchCtrl.moviesCollection" ng-show="searchCtrl.moviesCollection.length > 0">
+  <li>
+    <div class="row movie-preview">
+      <img ng-src="{{ movie.posterUrl  }}" alt="{{ movie.title }}" class="col-xs-4">
+      <div class="col-xs-8">
+        <h5>{{ movie.title }}</h5>
+        <p >{{ movie.genres }}</p>
+        <p class="small">{{ movie.description }}</p>
+        <span class="btn" ng-click="searchCtrl.addToTracked($index)">
+        <i class="glyphicon glyphicon-list-alt "></i>
+        TRACK
+      </span>
+      </div>
+    </div>
+    <hr/>
+  </li>
+</ul>

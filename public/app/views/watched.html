@@ -1,0 +1,26 @@
+<div class="tracker-header">
+  <a href="" ui-sref="tracked">
+    <h4 class="text-muted">TRACKED</h4>
+  </a>
+  <h4>WATCHED</h4>
+</div>
+<p class="empty-message" ng-hide="watchedCtrl.watchedMovies.length > 0">
+  No movies added yet! <a href="" ui-sref="search">Search</a> for a movie, add it
+  to your tracked list and mark it as watched when you've finally saw it.
+</p>
+<div ng-show="watchedCtrl.watchedMovies.length > 0">
+  <ul class="movies" ng-repeat="movie in watchedCtrl.watchedMovies"
+      >
+    <li>
+      <div class="row movie-preview">
+        <img ng-src="{{ movie.posterUrl  }}" alt="{{ movie.title }}" class="col-xs-4">
+        <div class="col-xs-8">
+          <h5>{{ movie.title }}</h5>
+          <p >{{ movie.genres }}</p>
+          <p class="small">{{ movie.description }}</p>
+        </div>
+      </div>
+      <hr/>
+    </li>
+  </ul>
+</div>
